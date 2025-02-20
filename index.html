@@ -4,39 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
     <title>Newsletter Sign Up Page</title>
   </head>
   <body>
-    <div class="newsletter-cta">
-      <picture>
-        <source
-          media="(min-width: 650px)"
-          srcset="./assets/images/illustration-sign-up-desktop.svg"
-        />
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
-      </picture>
-      <div class="content">
-        <h1 class="title">Stay updated&#33;</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on&#58;</p>
-        <ul role="list" class="checkmark-list">
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more&#33;</li>
-        </ul>
-        <form action="">
-          <div class="form-group with-error-field">
-            <label for="email">Email address</label>
+    <div class="wrapper">
+      <div class="newsletter-cta hide" id="newsletter-cta-hide">
+        <picture>
+          <source
+            media="(min-width: 650px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+        </picture>
+        <div class="content">
+          <h1 class="title">Stay updated&#33;</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on&#58;</p>
+          <ul role="list" class="checkmark-list">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more&#33;</li>
+          </ul>
+          <form action="">
+            <div class="form-group with-error-field">
+              <label for="email">Email address</label>
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="email@company.com"
-            />
-            <span class="error">Email address required</span>
-          </div>
-          <button class="button">Subscribe to monthly newsletter</button>
-        </form>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+              />
+              <span class="error">Email address required</span>
+            </div>
+            <button type="button" id="submit-button" class="button">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- success message -->
+      <div class="success_message">
+        <img src="./assets/images/icon-success.svg" alt="success icon" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to
+          <span class="email-span">bla@bla.com</span>. Please open it and click
+          the button inside to confirm your subscription
+        </p>
+        <button id="dismiss-button" type="button" class="button btn_dismiss">
+          Dismiss Message
+        </button>
       </div>
     </div>
   </body>
