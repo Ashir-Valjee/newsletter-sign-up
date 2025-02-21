@@ -131,6 +131,7 @@ input:not(:focus):invalid {
   border: 0;
   padding: 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus-visible {
@@ -142,7 +143,8 @@ input:not(:focus):invalid {
   );
 }
 
-form {
+form,
+.success_message {
   isolation: isolate;
 }
 
@@ -183,6 +185,13 @@ form {
 }
 .newsletter-cta.hide {
   display: block;
+}
+
+@media (max-width: 650px) {
+  .newsletter-cta.hide {
+    height: 100vh;
+    border-radius: inherit;
+  }
 }
 
 @media (min-width: 650px) {
